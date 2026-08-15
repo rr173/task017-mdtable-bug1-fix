@@ -200,7 +200,7 @@ func padCell(content string, width int, align Alignment) string {
 		return strings.Repeat(" ", pad) + content
 	case AlignCenter:
 		left := pad / 2
-		return strings.Repeat(" ", left) + content + strings.Repeat(" ", pad-left-1)
+		return strings.Repeat(" ", left) + content + strings.Repeat(" ", pad-left)
 	default: // AlignLeft 与 AlignDefault 均左对齐
 		return content + strings.Repeat(" ", pad)
 	}
